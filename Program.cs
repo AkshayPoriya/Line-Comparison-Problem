@@ -18,13 +18,17 @@ namespace LineComparisonProblem
             Console.WriteLine("End Point of Line2: ({0}, {0})", x_2, y_2);
             double length_2 = Distance(x_1, y_1, x_2, y_2);
             Console.WriteLine("Length of Line2: {0}", length_2);
-            if (length_1 == length_2)
+            if (length_1 > length_2)
             {
-                Console.WriteLine("Both lines are of equal length.");
+                Console.WriteLine("Line1 is longer than line2");
+            }
+            else if(length_2>length_1)
+            {
+                Console.WriteLine("Line2 is longer than line1");
             }
             else
             {
-                Console.WriteLine("Both lines are of unequal length.");
+                Console.WriteLine("Both lines are of equal length");
             }
         }
 
