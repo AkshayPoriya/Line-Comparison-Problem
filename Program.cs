@@ -8,9 +8,24 @@ namespace LineComparisonProblem
         {
             int x1 = RandNumber(), y1 = RandNumber();
             int x2 = RandNumber(), y2 = RandNumber();
-            Console.WriteLine("Start Point: ({0}, {0})", x1,y1);
-            Console.WriteLine("End Point: ({0}, {0})", x2, y2);
-            Console.WriteLine("Length of Line: {0}", Distance(x1,y1,x2,y2));
+            Console.WriteLine("Start Point of Line1: ({0}, {0})", x1,y1);
+            Console.WriteLine("End Point of Line1: ({0}, {0})", x2, y2);
+            double length_1 = Distance(x1, y1, x2, y2);
+            Console.WriteLine("Length of Line1: {0}", length_1);
+            int x_1 = RandNumber(), y_1 = RandNumber();
+            int x_2 = RandNumber(), y_2 = RandNumber();
+            Console.WriteLine("Start Point of Line2: ({0}, {0})", x_1, y_1);
+            Console.WriteLine("End Point of Line2: ({0}, {0})", x_2, y_2);
+            double length_2 = Distance(x_1, y_1, x_2, y_2);
+            Console.WriteLine("Length of Line2: {0}", length_2);
+            if (length_1 == length_2)
+            {
+                Console.WriteLine("Both lines are of equal length.");
+            }
+            else
+            {
+                Console.WriteLine("Both lines are of unequal length.");
+            }
         }
 
         static int RandNumber()
